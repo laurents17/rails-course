@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <a href="/questions/new">New</a>
+        <a href="/questions/edit?id=<%= questions.id %>">Edit</a>
+        
+        <% @questions.each do |q| %>
+            <div>
+                <%= q.question %>
+                <%= q.answer %>
+                <%= q.flag %>
+            </div>
+        <% end %>
+        
+    </body>
+</html>
