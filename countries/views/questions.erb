@@ -1,13 +1,14 @@
 <html>
     <body>
         <a href="/questions/new">New</a>
-        <a href="/questions/edit?id=<%= questions.id %>">Edit</a>
         
         <% @questions.each do |q| %>
             <div>
+                <a href="/questions/edit?id=<%= q.id %>">Edit</a>
+                <a href="/questions/delete?id=<%= q.id %>">Delete</a>
                 <%= q.question %>
                 <%= q.answer %>
-                <%= q.flag %>
+                <img height="100" src="<%= q.flag %>">
             </div>
         <% end %>
         

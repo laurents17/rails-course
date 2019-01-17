@@ -35,6 +35,22 @@ get '/questions/edit' do
 end
 
 post '/questions/edit' do
-    #update the record with the info from the form in edit.erb
-    
+#find by id
+    question = Question.find_by(params[:id])
+#update the record with the info from the form in edit.erb
+    question.question = params[:question]
+    question.answer = params[:answer]
+    question.answer = params[:flag]
+    question.save
+   redirect '/questions'
+end
+
+get '/questions/delete' do
+    @question = Question.find(params[:id])
+    erb :delete
+end
+
+post '/questions/delete' do
+    Question.destroy
+   redirect '/questions'
 end
