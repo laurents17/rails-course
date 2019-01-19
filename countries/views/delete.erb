@@ -8,6 +8,7 @@
         </ul>
         <br>
         <form action="/questions/delete" method="post">
+            <input type = "hidden" name = "id" value = <%= @question.id %>>
             <input type="submit" text="Delete">
         </form>
             

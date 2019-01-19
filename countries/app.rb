@@ -22,7 +22,7 @@ post '/questions' do
    question = Question.new
    question.question = params[:question]
    question.answer = params[:answer]
-   question.answer = params[:flag]
+   question.flag = params[:flag]
    question.save
    redirect '/questions'
 end
@@ -36,14 +36,27 @@ end
 
 post '/questions/edit' do
 #find by id
-    question = Question.find_by(params[:id])
+    question = Question.find(params[:id])
 #update the record with the info from the form in edit.erb
     question.question = params[:question]
     question.answer = params[:answer]
-    question.answer = params[:flag]
+    question.flag = params[:flag]
     question.save
    redirect '/questions'
 end
+
+get '/guess' do
+   questions = Question.all
+   index = rand(questions.length)
+   @question = questions[index]
+   erb :guess
+end
+
+get '/answer' do
+   @question = Question.find(params[:id])
+   erb :answer
+end
+
 
 get '/questions/delete' do
     @question = Question.find(params[:id])
@@ -51,6 +64,7 @@ get '/questions/delete' do
 end
 
 post '/questions/delete' do
-    Question.destroy
-   redirect '/questions'
+    @question.delete
+    
+    redirect '/questions'
 end
