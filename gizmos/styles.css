@@ -1,0 +1,50 @@
+body{
+  background-color: black;
+}
+
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://www.wallpaperup.com/uploads/wallpapers/2015/01/22/597450/0f836c5230280613e99c7aaccfa33064-1400.jpg");
+      height: 300px;
+}
+
+h1{
+  font-family: "Copperplate Gothic Light"; 
+  font-size: 112px;
+  color: #D3D3D3;
+  text-align: center;
+  padding-top: 35px;
+  margin: 0;
+}
+
+h3{
+    font-family: "Copperplate Gothic Light"; 
+  font-size: 30px;
+  color: #D3D3D3;
+  text-align: center;
+  padding-top: 20px;
+  margin: 0;
+}
+
+p{
+  font-family: "Trebuchet MS";
+  color: #D3D3D3;
+}
+
+button{
+  width: 20%;
+}
+
+div.section{
+  margin: auto;
+  width: 55%;
+  text-align: center;
+  padding: 10px;
+}
+
+.bottom-banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://www.wallpaperup.com/uploads/wallpapers/2015/01/22/597450/0f836c5230280613e99c7aaccfa33064-1400.jpg");
+    height: 75px;
+    margin-top: 20px;
+}
+
+
