@@ -7,6 +7,11 @@ set :database, {adapter: 'sqlite3', database: 'test.db'}
 class Question < ActiveRecord::Base
 end
 
+
+get '/' do
+   redirect '/questions' 
+end
+
 get '/questions' do
     #load questions from database
     @questions = Question.all
@@ -64,7 +69,7 @@ get '/questions/delete' do
 end
 
 post '/questions/delete' do
+    @question = Question.find(params[:id])
     @question.delete
-    
     redirect '/questions'
 end
