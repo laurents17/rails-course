@@ -4,6 +4,9 @@ require 'sinatra/activerecord'
 
 set :database, {adapter: 'sqlite3', database: 'test.db'}
 
+class Question < ActiveRecord::Base
+end
+
 get '/' do
-    return "Hello, World!"
+    'Hello, World!'
 end

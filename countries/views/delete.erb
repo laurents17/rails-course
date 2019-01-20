@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p>You are about to delete: </p>
+        <ul>
+            <li><%= @question.question %></li>
+            <li><%= @question.answer %></li>
+            <li><%= @question.flag %></li>
+        </ul>
+        <br>
+        <form action="/questions/delete" method="post">
+            <input type = "hidden" name = "id" value = <%= @question.id %>>
+            <input type="submit" text="Delete">
+        </form>
+            
+    </body>
+</html>
