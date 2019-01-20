@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Contacts</h1>
+        <a href="/contacts/new">New</a>
+        
+        <%# Search feature %>
+        
+        
+        <% @contacts.each do |c| %>
+            <div>
+                <a href="/contacts/details?id=<%= c.id %>"><%= c.first_name %> <%= c.last_name %></a>
+            </div>
+        <% end %>
+        </body>
+</html>

@@ -1,0 +1,23 @@
+<%# render details and options for an individual contact %>
+
+<html>
+    <body>
+        <h1>Contact Details</h1>
+            <div>
+                <%= @contact.first_name %> 
+                <%= @contact.last_name %>
+                </br>
+                <%= @contact.phone %>
+                </br>
+                <%= @contact.email %> 
+                </br>
+                <%= @contact.address %>
+                <%= @contact.city %> 
+                <%= @contact.state %>
+                <%= @contact.zip %>
+                </br>
+                <a href="/contacts/edit?id=<%= @contact.id %>">Edit</a>
+                <a href="/contacts/verify_delete?id=<%= @contact.id %>">Delete</a>
+            </div>
+        </body>
+</html>
