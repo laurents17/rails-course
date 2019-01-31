@@ -1,0 +1,12 @@
+<h3>Courses</h3>
+
+<a href='/courses/new'>Add Course</a>
+
+<% @courses.each do |c| %>
+    <div>
+        <a href= '/courses/details?id=<%= c.id %>'><%= c.name %></a>
+    </div>
+<% end %>
+
+
+    

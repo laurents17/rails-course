@@ -1,0 +1,18 @@
+<h3>Course Details</h3>
+
+<div>
+    <%= @course.name %>
+    <%= @course.location %>
+    <%= @course.description %>
+</div>
+
+<h3>Students</h3>
+
+<div>
+    <% @course.students.each do |s| %>
+        <p><%= s.first_name %> <%= s.last_name %> </p>
+    <% end %>
+</div>
+
+<a href="/courses/edit?id=<%= @course.id %>">Edit</a>
+<a href="/courses/delete?id=<%= @course.id %>">Delete</a>
