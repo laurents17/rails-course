@@ -1,0 +1,13 @@
+<div>
+    <form action="/students" method="post">
+         <input type="text" name="first_name" placeholder="First Name">
+         <input type="text" name="last_name" placeholder="Last Name">
+         <input type="text" name="picture" placeholder="Photo URL">
+         <select name="course_id">
+             <% @courses.each do |c| %>
+                 <option value="<%= c.id %>"><%= c.name %></option>
+            <% end %>
+         </select>
+         <input type="submit" value="Submit">
+     </form>
+ </div>

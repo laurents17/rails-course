@@ -1,0 +1,11 @@
+<h3>Student Details</h3>
+
+<div>
+    <%= @student.first_name %>
+    <%= @student.last_name %>
+    <img src="<%= @student.picture %>">
+    <%= @course.name %>
+</div>
+
+<a href="/students/edit?id=<%= @student.id %>">Edit</a>
+<a href="/students/delete?id=<%= @student.id %>">Delete</a>
