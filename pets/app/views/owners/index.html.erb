@@ -1,0 +1,10 @@
+<h3>Owners Index</h3>
+
+<a href="/owners/new">Add Owner</a>
+
+<% @owners.each do |o|  %>
+    <div>
+        <h5><%= o.first_name %> <%= o.last_name %></h5>
+        <a href="/owners/show?id=<%= o.id %>">Details</a>
+    </div>
+<% end %>

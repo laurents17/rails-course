@@ -1,0 +1,13 @@
+<h3>Edit Owner</h3>
+
+<form action="/owners/edit" method="post">
+    <input type="text" name="first_name" value="<%= @owner.first_name %>">
+    <input type="text" name="last_name" value="<%= @owner.last_name %>"> 
+    <input type="text" name="phone" value="<%= @owner.phone %>">
+    <input type="text" name="address" value="<%= @owner.address %>">
+    <input type="text" name="city" value="<%= @owner.city %>">
+    <input type="text" name="state" value="<%= @owner.state %>">
+    <input type="text" name="zip" value="<%= @owner.zip %>">
+    <input type="hidden" name="id" value="<%= @owner.id %>">
+    <input type="submit" text="Submit">
+</form>

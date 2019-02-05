@@ -1,0 +1,21 @@
+<h3>Add Pet</h3>
+
+<form action="/pets" method="post">
+    <input type="text" name="name" placeholder="Pet's Name">
+    <select name="owner_id">
+        <% @owners.each do |o| %>
+            <option value="<%= o.id %>"><%= o.first_name %> <%= o.last_name %></option>
+        <% end %> 
+    </select>
+    <select name="category">
+        <option value="canine">Canine</option>
+        <option value="feline">Feline</option>
+        <option value="reptile">Reptile</option>
+        <option value="amphibian">Amphibian</option>
+        <option value="exotic">Exotic</option>
+    </select>
+    <input type="text" name="breed" placeholder="Breed/Species">
+    <input type="date" name="birthday" placeholder="Bithday">
+    <input type="text" name="photo" placeholder="Photo URL">
+    <input type="submit" text="Submit">
+</form>
