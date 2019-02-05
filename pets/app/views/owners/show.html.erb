@@ -1,0 +1,17 @@
+<h3>Owner Details</h3>
+
+<h5><%= @owner.first_name %> <%= @owner.last_name %></h5>
+
+<p><%= @owner.phone %></p>
+<p><%= @owner.address %></p>
+<p><%= @owner.city %>, <%= @owner.state %> <%= @owner.zip %></p>
+
+<a href="/owners/edit?id=<%= @owner.id %>">Edit</a>
+<a href="/owners/delete?id=<%= @owner.id %>">Delete</a>
+<p>Warning: Deleting an Owner will also delete all associated Pets.</p>
+
+<h5>Pets:</h5>
+
+<% @owner.pets.each do |p| %>
+    <a href="/pets/show?id=<%= p.id %>"><%= p.name %></a>
+<% end %>

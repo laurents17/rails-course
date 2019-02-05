@@ -1,0 +1,10 @@
+<h3>Pet Details</h3>
+
+<h5><%= @pet.name %></h5>
+
+<p>Breed: <%= @pet.breed %></p>
+<p>Owner: <%= @pet.owner.first_name %> <%= @pet.owner.last_name %></p>
+<img src="<%= @pet.photo %>">
+
+<a href="/pets/edit?id=<%= @pet.id %>">Edit</a>
+<a href="/pets/delete?id=<%= @pet.id %>">Delete</a>

@@ -5,7 +5,7 @@
          <input type="text" name="name" value="<%= @course.name %>" placeholder="Name">
          <input type="text" name="location" value="<%= @course.location %>" placeholder="Location">
          <textarea name="description" value="<% @course.description %>">Description</textarea>
-         <input type="hidden" value="<%= @course.id %>">
+         <input type="hidden" name="id" value="<%= @course.id %>">
          <input type="submit" value="Submit" class="button">
      </form>
          <a href="/courses/details?id=<%= @course.id %>" class="button">Discard</a>

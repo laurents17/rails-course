@@ -1,0 +1,13 @@
+<h3>Pets Index</h3>
+
+<a href="/pets/new">Add Pet</a>
+
+<% @pets.each do |p|  %>
+    <div>
+        <h5><%= p.name %></h5>
+        <p>Breed: <%= p.breed %></p>
+        <p>Owner: <%= p.owner.first_name %> <%= p.owner.last_name %></p>
+        <a href="/pets/show?id=<%= p.id %>">Details</a>
+        <img src="<%= p.photo %>">
+    </div>
+<% end %>
